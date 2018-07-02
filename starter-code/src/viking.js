@@ -77,8 +77,8 @@ function War() {
   };
 
   this.vikingAttack = function() {
-    var vikingIndex = parseInt(Math.random(vikingArmy.length - 1));
-    var saxonIndex = parseInt(Math.random(saxonArmy.length - 1));
+    var vikingIndex = parseInt(Math.random() * vikingArmy.length);
+    var saxonIndex = parseInt(Math.random() * saxonArmy.length);
 
     saxonArmy[saxonIndex].receiveDamage(vikingArmy[vikingIndex].strength);
     if (saxonArmy[saxonIndex].health <= 0) {
